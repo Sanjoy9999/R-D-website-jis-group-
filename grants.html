@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Research Grant Projects - JIS R&D</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="grants.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/js/all.min.js"></script>
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">JIS R&D</div>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="grants.html">Research Grants</a></li>
+                <li><a href="rfmo.html">RFMO</a></li>
+                <li><a href="login.html">Login</a></li>
+                <li><a href="admin.html">Admin</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+            <div class="burger">
+                <div class="line1"></div>
+                <div class="line2"></div>
+                <div class="line3"></div>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <h1>Research Grant Projects</h1>
+        
+        <div class="filters">
+            <button class="filter-btn active" data-filter="all">All</button>
+            <button class="filter-btn" data-filter="new">New Grants</button>
+            <button class="filter-btn" data-filter="ongoing">Ongoing Projects</button>
+            <button class="filter-btn" data-filter="closed">Closed Grants</button>
+        </div>
+
+        <div class="grants-container">
+            <div class="grant-card new">
+                <h2>AI in Healthcare Grant</h2>
+                <p>Developing AI-powered diagnostic tools for early disease detection.</p>
+                <span class="grant-status">New</span>
+                <button class="express-interest-btn">Express Interest</button>
+            </div>
+            <div class="grant-card ongoing">
+                <h2>Sustainable Energy Research</h2>
+                <p>Researching new methods for efficient solar energy conversion.</p>
+                <span class="grant-status">Ongoing</span>
+                <button class="express-interest-btn">Express Interest</button>
+            </div>
+            <div class="grant-card closed">
+                <h2>Smart Cities Initiative</h2>
+                <p>Creating IoT solutions for urban infrastructure management.</p>
+                <span class="grant-status">Closed</span>
+                <button class="express-interest-btn" disabled>Closed</button>
+            </div>
+            <!-- Add more grant cards as needed -->
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2023 JIS R&D Initiatives. All rights reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+    <script src="grants.js"></script>
+</body>
+</html>
+

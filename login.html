@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - JIS R&D</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="login.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/js/all.min.js"></script>
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">JIS R&D</div>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="grants.html">Research Grants</a></li>
+                <li><a href="rfmo.html">RFMO</a></li>
+                <li><a href="login.html">Login</a></li>
+                <li><a href="admin.html">Admin</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+            <div class="burger">
+                <div class="line1"></div>
+                <div class="line2"></div>
+                <div class="line3"></div>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <div class="login-container">
+            <h1>Login</h1>
+            <form id="login-form">
+                <div class="form-group">
+                    <label for="faculty-id">Faculty ID</label>
+                    <input type="text" id="faculty-id" name="faculty-id" required>
+                </div>
+                <div class="form-group">
+                    <label for="password">Password</label>
+                    <input type="password" id="password" name="password" required>
+                </div>
+                <button type="submit" class="btn">Login</button>
+            </form>
+            <div class="forgot-password">
+                <a href="#" id="forgot-password-link">Forgot Password?</a>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2023 JIS R&D Initiatives. All rights reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+    <script src="login.js"></script>
+</body>
+</html>
+

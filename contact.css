@@ -1,0 +1,155 @@
+.contact-info,
+.institute-contacts,
+.feedback-form,
+.faq {
+  background-color: #fff;
+  border-radius: 10px;
+  padding: 2rem;
+  margin-bottom: 2rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.contact-info:hover,
+.institute-contacts:hover,
+.feedback-form:hover,
+.faq:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2);
+}
+
+.contact-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5rem;
+}
+
+.contact-card {
+  background-color: #f8f9fa;
+  border-radius: 5px;
+  padding: 1.5rem;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.contact-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.contact-card h3 {
+  margin-bottom: 0.5rem;
+  color: #2c3e50;
+}
+
+.contact-card p {
+  margin-bottom: 0.25rem;
+}
+
+.contact-card i {
+  margin-right: 0.5rem;
+  color: #3498db;
+}
+
+.form-group {
+  margin-bottom: 1.5rem;
+}
+
+label {
+  display: block;
+  margin-bottom: 0.5rem;
+  color: #2c3e50;
+}
+
+input[type="text"],
+input[type="email"],
+textarea {
+  width: 100%;
+  padding: 0.5rem;
+  border: 1px solid #bdc3c7;
+  border-radius: 5px;
+  font-size: 1rem;
+  transition: border-color 0.3s ease;
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+textarea:focus {
+  outline: none;
+  border-color: #3498db;
+}
+
+textarea {
+  height: 150px;
+  resize: vertical;
+}
+
+.btn {
+  display: inline-block;
+  background-color: #3498db;
+  color: #fff;
+  padding: 0.75rem 1.5rem;
+  border: none;
+  border-radius: 5px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+  background-color: #2980b9;
+}
+
+.faq-list {
+  display: grid;
+  gap: 1.5rem;
+}
+
+.faq-item {
+  background-color: #f8f9fa;
+  border-radius: 5px;
+  padding: 1.5rem;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.faq-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.faq-item h3 {
+  margin-bottom: 0.5rem;
+  color: #2c3e50;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.contact-info,
+.institute-contacts,
+.feedback-form,
+.faq {
+  opacity: 0;
+  animation: fadeIn 0.5s ease-out forwards;
+}
+
+.contact-info {
+  animation-delay: 0.1s;
+}
+.institute-contacts {
+  animation-delay: 0.2s;
+}
+.feedback-form {
+  animation-delay: 0.3s;
+}
+.faq {
+  animation-delay: 0.4s;
+}
+

@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Portal - JIS R&D</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="admin.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/js/all.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">JIS R&D</div>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="grants.html">Research Grants</a></li>
+                <li><a href="rfmo.html">RFMO</a></li>
+                <li><a href="login.html">Login</a></li>
+                <li><a href="admin.html">Admin</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+            <div class="burger">
+                <div class="line1"></div>
+                <div class="line2"></div>
+                <div class="line3"></div>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <h1>Admin Portal</h1>
+        
+        <section class="dashboard">
+            <h2>Dashboard</h2>
+            <div class="dashboard-grid">
+                <div class="dashboard-item">
+                    <h3>Total Projects</h3>
+                    <p class="dashboard-number">42</p>
+                </div>
+                <div class="dashboard-item">
+                    <h3>Active Grants</h3>
+                    <p class="dashboard-number">18</p>
+                </div>
+                <div class="dashboard-item">
+                    <h3>Pending Proposals</h3>
+                    <p class="dashboard-number">7</p>
+                </div>
+                <div class="dashboard-item">
+                    <h3>Total Funding</h3>
+                    <p class="dashboard-number">$2.5M</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="project-overview">
+            <h2>Project Overview</h2>
+            <canvas id="projectChart"></canvas>
+        </section>
+
+        <section class="grant-management">
+            <h2>Grant Management</h2>
+            <div class="grant-actions">
+                <button id="postGrant" class="btn">Post New Grant</button>
+                <button id="updateGrant" class="btn">Update Existing Grant</button>
+            </div>
+            <table class="grant-table">
+                <thead>
+                    <tr>
+                        <th>Grant ID</th>
+                        <th>Title</th>
+                        <th>Status</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>G001</td>
+                        <td>AI in Healthcare</td>
+                        <td>Active</td>
+                        <td>
+                            <button class="btn-small">Edit</button>
+                            <button class="btn-small">Close</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>G002</td>
+                        <td>Sustainable Energy Research</td>
+                        <td>Pending</td>
+                        <td>
+                            <button class="btn-small">Edit</button>
+                            <button class="btn-small">Approve</button>
+                        </td>
+                    </tr>
+                    <!-- Add more rows as needed -->
+                </tbody>
+            </table>
+        </section>
+
+        <section class="project-monitoring">
+            <h2>Project Monitoring</h2>
+            <table class="project-table">
+                <thead>
+                    <tr>
+                        <th>Project ID</th>
+                        <th>Title</th>
+                        <th>Principal Investigator</th>
+                        <th>Progress</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>P001</td>
+                        <td>AI-Powered Diagnostic Tool</td>
+                        <td>Dr. Jane Smith</td>
+                        <td>
+                            <div class="progress-bar">
+                                <div class="progress" style="width: 75%;"></div>
+                            </div>
+                        </td>
+                        <td>
+                            <button class="btn-small">View Report</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>P002</td>
+                        <td>Solar Energy Conversion</td>
+                        <td>Dr. John Doe</td>
+                        <td>
+                            <div class="progress-bar">
+                                <div class="progress" style="width: 40%;"></div>
+                            </div>
+                        </td>
+                        <td>
+                            <button class="btn-small">View Report</button>
+                        </td>
+                    </tr>
+                    <!-- Add more rows as needed -->
+                </tbody>
+            </table>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2023 JIS R&D Initiatives. All rights reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+    <script src="admin.js"></script>
+</body>
+</html>
+

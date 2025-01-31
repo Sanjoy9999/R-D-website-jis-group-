@@ -1,0 +1,170 @@
+.rfmo-info,
+.seed-funding,
+.evaluation-process,
+.quarterly-reporting,
+.forms {
+  background-color: #fff;
+  border-radius: 10px;
+  padding: 2rem;
+  margin-bottom: 2rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.rfmo-info:hover,
+.seed-funding:hover,
+.evaluation-process:hover,
+.quarterly-reporting:hover,
+.forms:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2);
+}
+
+h2 {
+  color: #2c3e50;
+  margin-bottom: 1rem;
+}
+
+.btn {
+  display: inline-block;
+  background-color: #3498db;
+  color: #fff;
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+  margin-top: 1rem;
+}
+
+.btn:hover {
+  background-color: #2980b9;
+}
+
+.evaluation-process ol {
+  padding-left: 1.5rem;
+}
+
+.evaluation-process li {
+  margin-bottom: 0.5rem;
+}
+
+.form-link {
+  color: #3498db;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.form-link:hover {
+  color: #2980b9;
+  text-decoration: underline;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.rfmo-info,
+.seed-funding,
+.evaluation-process,
+.quarterly-reporting,
+.forms {
+  opacity: 0;
+  animation: fadeIn 0.5s ease-out forwards;
+}
+
+.rfmo-info {
+  animation-delay: 0.1s;
+}
+.seed-funding {
+  animation-delay: 0.2s;
+}
+.evaluation-process {
+  animation-delay: 0.3s;
+}
+.quarterly-reporting {
+  animation-delay: 0.4s;
+}
+.forms {
+  animation-delay: 0.5s;
+}
+
+
+/* my css code for the html  */
+
+.sec-head {
+  width: 100%;
+  padding: 2rem;
+  margin-bottom: 2rem;
+  min-height: 400px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: white;
+  background-image: url(resource/JQ6JTgJPabJhFoRtyEcI5.jpg);
+  background-color: rgba(0, 0, 0, 0.4);
+  background-blend-mode: darken;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+#headh2{
+  color: white;
+  font-size: x-large;
+}
+#headh1{
+  color: white;
+  font-size: xx-large;
+}
+
+section{
+  display: flex;
+  justify-content: space-between;
+}
+
+figure{
+  width: 600px;
+  max-width: 100%;
+  height: 200px;
+}
+
+img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+@media screen and (min-width: 600px) and (max-width: 1024px) {
+  section{
+    flex-direction: column;
+  }
+  img{
+    order: 1;
+  }
+  article{
+    order: 2;
+  }
+
+}
+
+@media screen and (max-width: 600px) {
+  section{
+    flex-direction: column;
+  }
+  img{
+    order: 1;
+  }
+  article{
+    order: 2;
+  }
+
+}
