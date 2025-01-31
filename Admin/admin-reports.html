@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin - Reports</title>
+    <link rel="stylesheet" href="/css_files/admin-styles.css">
+    <link rel="stylesheet" href="/css_files/admin-reports.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <div class="admin-container">
+        <nav class="admin-nav">
+            <ul>
+                <li><a href="admin.html"><i class="fas fa-tachometer-alt"></i> Dashboard</a></li>
+                <li><a href="admin-grant-opportunities.html"><i class="fas fa-gift"></i> Grant Opportunities</a></li>
+                <li><a href="admin-projects.html"><i class="fas fa-project-diagram"></i> Projects</a></li>
+                <li><a href="admin-institutes.html"><i class="fas fa-university"></i> Institutes</a></li>
+                <li><a href="admin-reports.html" class="active"><i class="fas fa-chart-bar"></i> Reports</a></li>
+                <li><a href="admin-settings.html"><i class="fas fa-cog"></i> Settings</a></li>
+            </ul>
+        </nav>
+        <main class="admin-main">
+            <h1>Reports</h1>
+            <div class="report-filters">
+                <label for="reportType">Report Type:</label>
+                <select id="reportType">
+                    <option value="projectStatus">Project Status</option>
+                    <option value="fundingByInstitute">Funding by Institute</option>
+                    <option value="projectTimeline">Project Timeline</option>
+                </select>
+                <label for="dateRange">Date Range:</label>
+                <select id="dateRange">
+                    <option value="lastMonth">Last Month</option>
+                    <option value="lastQuarter">Last Quarter</option>
+                    <option value="lastYear">Last Year</option>
+                    <option value="allTime">All Time</option>
+                </select>
+                <button id="generateReportBtn" class="btn-primary">Generate Report</button>
+            </div>
+            <div class="report-container">
+                <canvas id="reportChart"></canvas>
+            </div>
+            <div class="report-summary">
+                <h2>Report Summary</h2>
+                <p id="reportSummaryText"></p>
+            </div>
+        </main>
+    </div>
+
+    <script src="/js_files/admin-reports.js"></script>
+    <script src="/js_files/admin-script.js"></script>
+</body>
+</html>
+

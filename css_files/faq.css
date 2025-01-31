@@ -1,0 +1,56 @@
+/* faq.css */
+.faq-hero {
+    background-image: url("faq-hero-bg.jpg");
+    background-size: cover;
+    background-position: center;
+    color: white;
+    text-align: center;
+    padding: 150px 0;
+  }
+  
+  .faq-accordion {
+    max-width: 800px;
+    margin: 2rem auto;
+    padding: 0 1rem;
+  }
+  
+  .accordion {
+    background-color: var(--background-color);
+    color: var(--text-color);
+    cursor: pointer;
+    padding: 18px;
+    width: 100%;
+    text-align: left;
+    border: none;
+    outline: none;
+    transition: 0.4s;
+    font-weight: bold;
+  }
+  
+  .active,
+  .accordion:hover {
+    background-color: #e9ecef;
+  }
+  
+  .panel {
+    padding: 0 18px;
+    background-color: white;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.2s ease-out;
+  }
+  
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+  
+  .faq-item {
+    animation: fadeIn 0.5s ease-out;
+  }
+  
+  

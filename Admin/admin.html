@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RFMO Admin Dashboard - Research Innovation Platform</title>
+    <link rel="stylesheet" href="/css_files/admin-styles.css">
+    <link rel="stylesheet" href="/css_files/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+
+    
+
+    <div class="admin-container">
+        <aside class="sidebar">
+            <div class="sidebar-header">
+                <img src="logo.png" alt="Logo" class="logo">
+                <h2>RFMO Admin</h2>
+            </div>
+            <nav class="sidebar-nav">
+                <ul>
+                    <li class="active">
+                        <a href="admin.html">
+                            <i class="fas fa-home"></i>
+                            Dashboard
+                        </a>
+                    </li>
+                    <li>
+                        <a href="admin-grant-opportunities.html">
+                            <i class="fas fa-gift"></i>
+                            Grant Opportunities
+                        </a>
+                    </li>
+                    <li>
+                        <a href="admin-projects.html">
+                            <i class="fas fa-project-diagram"></i>
+                            Projects
+                        </a>
+                    </li>
+                    <li>
+                        <a href="admin-institutes.html">
+                            <i class="fas fa-university"></i>
+                            Institutes
+                        </a>
+                    </li>
+                    <li>
+                        <a href="admin-reports.html">
+                            <i class="fas fa-chart-bar"></i>
+                            Reports
+                        </a>
+                    </li>
+                    <li>
+                        <a href="admin-settings.html">
+                            <i class="fas fa-cog"></i>
+                            Settings
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+        </aside>
+
+        <main class="main-content">
+            <header class="top-bar">
+                <button id="sidebarToggle" class="sidebar-toggle">
+                    <i class="fas fa-bars"></i>
+                </button>
+                <div class="search-bar">
+                    <i class="fas fa-search"></i>
+                    <input type="text" placeholder="Search projects, grants...">
+                </div>
+                <div class="user-menu">
+                    <div class="notifications">
+                        <i class="fas fa-bell"></i>
+                        <span class="badge">3</span>
+                    </div>
+                    <div class="profile">
+                        <img src="avatar.png" alt="Profile">
+                        <span>Admin User</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                </div>
+            </header>
+
+            <div class="dashboard-content">
+                <h2>Dashboard Overview</h2>
+                <div class="stats-grid">
+                    <div class="stat-card">
+                        <div class="stat-icon">
+                            <i class="fas fa-project-diagram"></i>
+                        </div>
+                        <div class="stat-details">
+                            <h3>Total Projects</h3>
+                            <p class="stat-number">156</p>
+                            <p class="stat-change positive">+12.5%</p>
+                        </div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-icon">
+                            <i class="fas fa-university"></i>
+                        </div>
+                        <div class="stat-details">
+                            <h3>Institutes</h3>
+                            <p class="stat-number">42</p>
+                            <p class="stat-change positive">+5.2%</p>
+                        </div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-icon">
+                            <i class="fas fa-money-bill-wave"></i>
+                        </div>
+                        <div class="stat-details">
+                            <h3>Total Funding</h3>
+                            <p class="stat-number">$24.5M</p>
+                            <p class="stat-change positive">+18.7%</p>
+                        </div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-icon">
+                            <i class="fas fa-tasks"></i>
+                        </div>
+                        <div class="stat-details">
+                            <h3>Active Grants</h3>
+                            <p class="stat-number">28</p>
+                            <p class="stat-change negative">-3.5%</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="charts-grid">
+                    <div class="chart-card">
+                        <h3>Project Status Distribution</h3>
+                        <canvas id="projectStatusChart"></canvas>
+                    </div>
+                    <div class="chart-card">
+                        <h3>Funding by Institute</h3>
+                        <canvas id="fundingByInstituteChart"></canvas>
+                    </div>
+                </div>
+
+                <div class="recent-activity">
+                    <h3>Recent Activity</h3>
+                    <div class="activity-list">
+                        <!-- Activity items will be inserted by JavaScript -->
+                    </div>
+                </div>
+
+                <div class="quick-actions">
+                    <h3>Quick Actions</h3>
+                    <div class="action-buttons">
+                        <button id="newGrantBtn" class="btn-primary">
+                            <i class="fas fa-plus"></i> New Grant Opportunity
+                        </button>
+                        <button id="sanctionProjectBtn" class="btn-secondary">
+                            <i class="fas fa-check-circle"></i> Sanction Project
+                        </button>
+                        <button id="quarterlyReportBtn" class="btn-secondary">
+                            <i class="fas fa-file-alt"></i> Quarterly Report
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <!-- Modal for New Grant Opportunity -->
+    <div id="newGrantModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Create New Grant Opportunity</h2>
+            <form id="newGrantForm">
+                <div class="form-group">
+                    <label for="grantTitle">Grant Title</label>
+                    <input type="text" id="grantTitle" required>
+                </div>
+                <div class="form-group">
+                    <label for="grantDescription">Description</label>
+                    <textarea id="grantDescription" required></textarea>
+                </div>
+                <div class="form-group">
+                    <label for="grantAmount">Funding Amount</label>
+                    <input type="number" id="grantAmount" required>
+                </div>
+                <div class="form-group">
+                    <label for="grantDeadline">Application Deadline</label>
+                    <input type="date" id="grantDeadline" required>
+                </div>
+                <button type="submit" class="btn-primary">Create Grant</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Modal for Sanctioning Project -->
+    <div id="sanctionProjectModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Sanction Project</h2>
+            <form id="sanctionProjectForm">
+                <div class="form-group">
+                    <label for="projectSelect">Select Project</label>
+                    <select id="projectSelect" required>
+                        <option value="">Choose a project</option>
+                        <!-- Options will be populated by JavaScript -->
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="sanctionAmount">Sanction Amount</label>
+                    <input type="number" id="sanctionAmount" required>
+                </div>
+                <div class="form-group">
+                    <label for="sanctionNotes">Notes</label>
+                    <textarea id="sanctionNotes"></textarea>
+                </div>
+                <button type="submit" class="btn-primary">Sanction Project</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Modal for Quarterly Report -->
+    <div id="quarterlyReportModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Generate Quarterly Report</h2>
+            <form id="quarterlyReportForm">
+                <div class="form-group">
+                    <label for="reportQuarter">Select Quarter</label>
+                    <select id="reportQuarter" required>
+                        <option value="Q1">Q1 (Jan-Mar)</option>
+                        <option value="Q2">Q2 (Apr-Jun)</option>
+                        <option value="Q3">Q3 (Jul-Sep)</option>
+                        <option value="Q4">Q4 (Oct-Dec)</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="reportYear">Year</label>
+                    <input type="number" id="reportYear" required min="2000" max="2099">
+                </div>
+                <button type="submit" class="btn-primary">Generate Report</button>
+            </form>
+        </div>
+    </div>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="/js_files/admin-script.js"></script>
+</body>
+</html>

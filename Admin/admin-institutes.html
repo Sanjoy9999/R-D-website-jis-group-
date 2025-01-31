@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin - Institutes</title>
+    <link rel="stylesheet" href="/css_files/admin-styles.css">
+    <link rel="stylesheet" href="/css_files/admin-institutes.css">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <div class="admin-container">
+        <nav class="admin-nav">
+            <ul>
+                <li><a href="admin.html"><i class="fas fa-tachometer-alt"></i> Dashboard</a></li>
+                <li><a href="admin-grant-opportunities.html"><i class="fas fa-gift"></i> Grant Opportunities</a></li>
+                <li><a href="admin-projects.html"><i class="fas fa-project-diagram"></i> Projects</a></li>
+                <li><a href="admin-institutes.html" class="active"><i class="fas fa-university"></i> Institutes</a></li>
+                <li><a href="admin-reports.html"><i class="fas fa-chart-bar"></i> Reports</a></li>
+                <li><a href="admin-settings.html"><i class="fas fa-cog"></i> Settings</a></li>
+            </ul>
+        </nav>
+        <main class="admin-main">
+            <h1>Institutes</h1>
+            <button id="addInstituteBtn" class="btn-primary">Add New Institute</button>
+            <table id="instituteTable" class="admin-table">
+                <thead>
+                    <tr>
+                        <th>Institute Name</th>
+                        <th>Location</th>
+                        <th>Total Projects</th>
+                        <th>Total Funding</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- Institutes will be dynamically added here -->
+                </tbody>
+            </table>
+        </main>
+    </div>
+
+    <!-- Add Institute Modal -->
+    <div id="addInstituteModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Add New Institute</h2>
+            <form id="addInstituteForm">
+                <label for="instituteName">Institute Name:</label>
+                <input type="text" id="instituteName" required>
+
+                <label for="instituteLocation">Location:</label>
+                <input type="text" id="instituteLocation" required>
+
+                <label for="instituteDescription">Description:</label>
+                <textarea id="instituteDescription" required></textarea>
+
+                <button type="submit" class="btn-primary">Add Institute</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="/js_files/admin-institutes.js"></script>
+    <script src="/js_files/admin-script.js"></script>
+</body>
+</html>
+

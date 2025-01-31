@@ -1,0 +1,75 @@
+/* pricing.css */
+.pricing-hero {
+    background-image: url("pricing-hero-bg.jpg");
+    background-size: cover;
+    background-position: center;
+    color: white;
+    text-align: center;
+    padding: 150px 0;
+  }
+  
+  .pricing-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    padding: 2rem;
+  }
+  
+  .pricing-card {
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 2rem;
+    text-align: center;
+    transition: transform 0.3s ease;
+  }
+  
+  .pricing-card:hover {
+    transform: translateY(-5px);
+  }
+  
+  .pricing-card.featured {
+    border: 2px solid var(--primary-color);
+  }
+  
+  .pricing-card .price {
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin: 1rem 0;
+  }
+  
+  .pricing-card .price span {
+    font-size: 1rem;
+    font-weight: normal;
+  }
+  
+  .pricing-card ul {
+    list-style-type: none;
+    padding: 0;
+    margin-bottom: 1.5rem;
+  }
+  
+  .pricing-card li {
+    margin-bottom: 0.5rem;
+  }
+  
+  .faq-preview {
+    background-color: var(--background-color);
+    text-align: center;
+    padding: 4rem 2rem;
+  }
+  
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+  
+  .pricing-card {
+    animation: fadeIn 0.5s ease-out;
+  }
+  
+  

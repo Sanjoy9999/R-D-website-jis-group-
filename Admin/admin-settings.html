@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin - Settings</title>
+    <link rel="stylesheet" href="/css_files/admin-styles.css">
+    <link rel="stylesheet" href="/css_files/admin-settings.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <div class="admin-container">
+        <nav class="admin-nav">
+            <ul>
+                <li><a href="admin.html"><i class="fas fa-tachometer-alt"></i> Dashboard</a></li>
+                <li><a href="admin-grant-opportunities.html"><i class="fas fa-gift"></i> Grant Opportunities</a></li>
+                <li><a href="admin-projects.html"><i class="fas fa-project-diagram"></i> Projects</a></li>
+                <li><a href="admin-institutes.html"><i class="fas fa-university"></i> Institutes</a></li>
+                <li><a href="admin-reports.html"><i class="fas fa-chart-bar"></i> Reports</a></li>
+                <li><a href="admin-settings.html" class="active"><i class="fas fa-cog"></i> Settings</a></li>
+            </ul>
+        </nav>
+        <main class="admin-main">
+            <h1>Settings</h1>
+            <div class="settings-container">
+                <h2>General Settings</h2>
+                <form id="generalSettingsForm">
+                    <label for="siteName">Site Name:</label>
+                    <input type="text" id="siteName" name="siteName" required>
+
+                    <label for="adminEmail">Admin Email:</label>
+                    <input type="email" id="adminEmail" name="adminEmail" required>
+
+                    <label for="dateFormat">Date Format:</label>
+                    <select id="dateFormat" name="dateFormat">
+                        <option value="MM/DD/YYYY">MM/DD/YYYY</option>
+                        <option value="DD/MM/YYYY">DD/MM/YYYY</option>
+                        <option value="YYYY-MM-DD">YYYY-MM-DD</option>
+                    </select>
+
+                    <button type="submit" class="btn-primary">Save General Settings</button>
+                </form>
+
+                <h2>Notification Settings</h2>
+                <form id="notificationSettingsForm">
+                    <label>
+                        <input type="checkbox" id="emailNotifications" name="emailNotifications">
+                        Enable Email Notifications
+                    </label>
+                    <label>
+                        <input type="checkbox" id="smsNotifications" name="smsNotifications">
+                        Enable SMS Notifications
+                    </label>
+
+                    <button type="submit" class="btn-primary">Save Notification Settings</button>
+                </form>
+
+                <h2>Security Settings</h2>
+                <form id="securitySettingsForm">
+                    <label for="currentPassword">Current Password:</label>
+                    <input type="password" id="currentPassword" name="currentPassword" required>
+
+                    <label for="newPassword">New Password:</label>
+                    <input type="password" id="newPassword" name="newPassword" required>
+
+                    <label for="confirmPassword">Confirm New Password:</label>
+                    <input type="password" id="confirmPassword" name="confirmPassword" required>
+
+                    <button type="submit" class="btn-primary">Change Password</button>
+                </form>
+            </div>
+        </main>
+    </div>
+
+    <script src=" /js_files/admin-settings.js"></script>
+    <script src="/js_files/admin-script.js"></script>
+</body>
+</html>
+

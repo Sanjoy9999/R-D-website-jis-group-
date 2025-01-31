@@ -1,0 +1,91 @@
+/* solutions.css */
+.solutions-hero {
+    background-image: url("solutions-hero-bg.jpg");
+    background-size: cover;
+    background-position: center;
+    color: white;
+    text-align: center;
+    padding: 150px 0;
+  }
+  
+  .solutions-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    padding: 2rem;
+  }
+  
+  .solution-card {
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 1.5rem;
+    text-align: center;
+    transition: transform 0.3s ease;
+  }
+  
+  .solution-card:hover {
+    transform: translateY(-5px);
+  }
+  
+  .solution-card i {
+    font-size: 3rem;
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+  }
+  
+  .case-studies {
+    background-color: var(--background-color);
+    padding: 4rem 2rem;
+  }
+  
+  .case-study {
+    display: flex;
+    align-items: center;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    margin-bottom: 2rem;
+    overflow: hidden;
+  }
+  
+  .case-study img {
+    width: 40%;
+    object-fit: cover;
+  }
+  
+  .case-study-content {
+    padding: 2rem;
+  }
+  
+  @keyframes slideInFromLeft {
+    from {
+      transform: translateX(-50px);
+      opacity: 0;
+    }
+    to {
+      transform: translateX(0);
+      opacity: 1;
+    }
+  }
+  
+  @keyframes slideInFromRight {
+    from {
+      transform: translateX(50px);
+      opacity: 0;
+    }
+    to {
+      transform: translateX(0);
+      opacity: 1;
+    }
+  }
+  
+  .case-study:nth-child(odd) {
+    animation: slideInFromLeft 0.5s ease-out;
+  }
+  
+  .case-study:nth-child(even) {
+    animation: slideInFromRight 0.5s ease-out;
+  }
+  
+  

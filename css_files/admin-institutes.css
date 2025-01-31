@@ -1,0 +1,219 @@
+/* admin-institutes.css */
+.institutes-container {
+    padding: 20px;
+  }
+  
+  .institutes-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+  
+  .institutes-title {
+    font-size: 24px;
+    color: #333;
+  }
+  
+  #addInstituteBtn {
+    background-color: #28a745;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  #addInstituteBtn:hover {
+    background-color: #218838;
+  }
+  
+  #instituteTable {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: white;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  }
+  
+  #instituteTable th,
+  #instituteTable td {
+    padding: 12px 15px;
+    text-align: left;
+    border-bottom: 1px solid #e0e0e0;
+  }
+  
+  #instituteTable th {
+    background-color: #f8f9fa;
+    font-weight: bold;
+    color: #333;
+  }
+  
+  #instituteTable tr:hover {
+    background-color: #f5f5f5;
+  }
+  
+  .institute-actions button {
+    margin-right: 5px;
+    padding: 5px 10px;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .institute-actions button:hover {
+    opacity: 0.8;
+  }
+  
+  .view-btn {
+    background-color: #17a2b8;
+    color: white;
+  }
+  
+  .edit-btn {
+    background-color: #ffc107;
+    color: black;
+  }
+  
+  /* Modal styles */
+  .modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.4);
+  }
+  
+  .modal-content {
+    background-color: #fefefe;
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+    max-width: 500px;
+    border-radius: 5px;
+  }
+  
+  .close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+  }
+  
+  .close:hover,
+  .close:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+  }
+  
+  #addInstituteForm {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  #addInstituteForm label {
+    margin-top: 10px;
+    margin-bottom: 5px;
+  }
+  
+  #addInstituteForm input,
+  #addInstituteForm textarea {
+    padding: 8px;
+    margin-bottom: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+  }
+  
+  #addInstituteForm button {
+    margin-top: 15px;
+    padding: 10px;
+    background-color: #28a745;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  #addInstituteForm button:hover {
+    background-color: #218838;
+  }
+
+  .admin-container {
+    display: flex;
+    flex-direction: column;
+}
+
+.admin-nav ul {
+    display: flex;
+    flex-direction: column;
+    padding: 0;
+    list-style: none;
+}
+
+.admin-nav ul li {
+    margin-bottom: 10px;
+}
+
+.admin-nav ul li a {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    text-decoration: none;
+    color: #333;
+    transition: background-color 0.3s;
+}
+
+.admin-nav ul li a:hover,
+.admin-nav ul li a.active {
+    background-color: #007bff;
+    color: white;
+}
+
+.admin-main {
+    flex-grow: 1;
+    padding: 20px;
+}
+
+.institutes-header {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+@media (min-width: 768px) {
+    .admin-container {
+        flex-direction: row;
+    }
+
+    .admin-nav {
+        width: 250px;
+    }
+
+    .admin-main {
+        padding: 40px;
+    }
+
+    .institutes-header {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+    }
+}
+
+@media (min-width: 1024px) {
+    .institutes-header {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+    }
+}
+

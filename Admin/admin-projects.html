@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin - Projects</title>
+    <link rel="stylesheet" href="/css_files/admin-styles.css">
+    <link rel="stylesheet" href="/css_files/admin-projects.css">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <div class="admin-container">
+        <nav class="admin-nav">
+            <ul>
+                <li><a href="admin.html"><i class="fas fa-tachometer-alt"></i> Dashboard</a></li>
+                <li><a href="admin-grant-opportunities.html"><i class="fas fa-gift"></i> Grant Opportunities</a></li>
+                <li><a href="admin-projects.html" class="active"><i class="fas fa-project-diagram"></i> Projects</a></li>
+                <li><a href="admin-institutes.html"><i class="fas fa-university"></i> Institutes</a></li>
+                <li><a href="admin-reports.html"><i class="fas fa-chart-bar"></i> Reports</a></li>
+                <li><a href="admin-settings.html"><i class="fas fa-cog"></i> Settings</a></li>
+            </ul>
+        </nav>
+        <main class="admin-main">
+            <h1>Projects</h1>
+            <button id="sanctionProjectBtn" class="btn-primary">Sanction New Project</button>
+            <table id="projectTable" class="admin-table">
+                <thead>
+                    <tr>
+                        <th>Project Name</th>
+                        <th>Institute</th>
+                        <th>Start Date</th>
+                        <th>End Date</th>
+                        <th>Status</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- Projects will be dynamically added here -->
+                </tbody>
+            </table>
+        </main>
+    </div>
+
+    <!-- Sanction Project Modal -->
+    <div id="sanctionProjectModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Sanction New Project</h2>
+            <form id="sanctionProjectForm">
+                <label for="projectName">Project Name:</label>
+                <input type="text" id="projectName" required>
+
+                <label for="instituteSelect">Institute:</label>
+                <select id="instituteSelect" required>
+                    <option value="">Select Institute</option>
+                    <!-- Institutes will be dynamically added here -->
+                </select>
+
+                <label for="startDate">Start Date:</label>
+                <input type="date" id="startDate" required>
+
+                <label for="endDate">End Date:</label>
+                <input type="date" id="endDate" required>
+
+                <label for="projectDescription">Description:</label>
+                <textarea id="projectDescription" required></textarea>
+
+                <button type="submit" class="btn-primary">Sanction Project</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="/js_files/admin-projects.js"></script>
+    <script src="/js_files/admin-script.js"></script>
+</body>
+</html>
+
